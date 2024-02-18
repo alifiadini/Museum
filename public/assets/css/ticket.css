@@ -1,0 +1,122 @@
+/* * {
+  box-sizing: border-box;
+} */
+
+:root {
+  --fw-n: 300;
+  --fw-m: 600;
+  --fw-b: 800;
+  --fs-2: 5rem;
+  --fs-p: 1rem;
+  --primary-clr: #1e2126;
+  --secondary-clr: #36213E;
+  --secondary-clr-light: #554971;
+  --accent-clr: #EF6461;
+  --spacer: 1rem;
+  --spacer-md: calc(var(--spacer) * 2);
+  --spacer-lg: calc(var(--spacer) * 3);
+  --shadow: 0 0 1em rgba(0,0,0, .25);
+  --br: 5px;
+}
+
+.body {
+    padding: 5%;
+}
+
+h2 {
+  font-size: var(--fs-2);
+  font-weight: var(--fw-l);
+  margin: 0 0 0.5em;
+}
+
+p {
+  margin: 0 0 var(--spacer);
+}
+
+strong {
+  font-weight: var(--fw-m);
+}
+
+.button {
+  display: inline-block;
+  background: #1e2126;
+  color: white;
+  text-decoration: none;
+  padding: 1em 1.5em;
+  margin: 12px;
+  max-width: fit-content;
+  border-radius: 10px;
+  font-weight: var(--fw-b);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.8rem;
+  box-shadow: 5px 2px 5px -2px rgba(0, 0, 0, 0.57);
+  -webkit-box-shadow: 5px 2px 5px -2px rgba(0, 0, 0, 0.57);
+  -moz-box-shadow: 5px 2px 5px -2px rgba(0, 0, 0, 0.57);
+  background-image: url("../images/siger.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.button:hover{
+    background-color: #f2f2f2;
+    color: #1e2126;
+}
+.button--card {
+  margin-top: var(--spacer);
+}
+
+.Ccontainer {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.pricing__grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.card {
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  border: none;
+  width: 350px;
+}
+
+.card--important {
+  --primary-clr: var(--accent-clr);
+}
+
+.card__title {
+  background: var(--primary-clr);
+  color:#f2f2f2;
+  margin-bottom: 12px;
+  padding: var(--spacer) 0;
+  font-weight: var(--fw-m);
+  letter-spacing: 2px;
+  text-align: center;
+  font-size: 1.3rem;
+}
+
+.card__price {
+  color: var(--primary-clr);
+  padding-left: 3rem;
+  margin: 0;
+  font-size: 2em;
+  font-weight: var(--fw-b);
+}
+
+.card__price span {
+  font-size: 0.5em;
+  font-weight: var(--fw-n);
+}
+
+.card__body {
+    margin-top: 20px;
+  padding: 0 var(--spacer-lg) 2em;
+}

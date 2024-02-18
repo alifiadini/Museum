@@ -1,0 +1,160 @@
+
+  .section {
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #b87333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    place-items: center;
+    overflow: hidden;
+    gap: 2rem;
+    background-image: url("../images/siger.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: poppins;
+  }
+  .ctainer {
+    position: relative;
+    width: 700px;
+    border-radius: 20px;
+    padding: 30px;
+    box-sizing: border-box;
+    background: #f2f2f2;
+    box-shadow: 1px 4px 20px #353432a0;
+  } 
+  .card-text{
+    margin-bottom: 2rem;
+  }
+
+  .tr-det {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+  .tr-btm {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 100%;
+    gap: 12px;
+}
+@media (min-width: 200px) and (max-width: 1200px) {
+    .tr-btm {
+        flex-direction: column;
+        align-items: center;
+    }
+    .rowe{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column; 
+        gap: 10px;
+    }
+}
+.tr-det > h2 {
+    font-size: 2.7rem;
+    font-weight: 900;
+    text-align: start;
+}
+.border-2{
+    width: 80%;
+    border-radius: 5px;
+}
+
+.divider {
+    border: 2px solid #000; 
+    width: 80%;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+
+.tr-det span{
+    padding: 7px;
+}
+.tr-btm strong,.tr-det strong {
+    cursor: pointer;
+    display: flex;
+    font-size: 0.9rem;
+    font-weight: 700;
+    border-radius: 9px;
+    box-shadow: 5px 9px 5px -2px rgba(0, 0, 0, 0.57);
+    -webkit-box-shadow: 5px 9px 5px -2px rgba(0, 0, 0, 0.57);
+    -moz-box-shadow: 5px 9px 5px -2px rgba(0, 0, 0, 0.57);
+    color: #f2f2f2;
+    background-color: #1e2126;
+}
+.tr-btm strong:hover,.tr-det strong:hover {
+    background-color: #f2f2f2;
+    color: #1e2126;
+}
+
+  .vertical-progress {
+    background-color: #f2f2f2;
+    height: 50vh;
+    width: 35px;
+    display: flex;
+    border-radius: 10px;
+    flex-direction: column-reverse;
+    border: 0.5px solid gray;
+}
+
+.vertical-progress .progress-bar {
+    background-color: #e1ad01;
+    width: 100%;
+    border: 0.5px solid gray;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    transition: height 0.6s;
+}
+
+.rowe{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.cols{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    max-width: fit-content;
+    /* justify-content: safe; */
+    align-items: center;
+}
+.rowe b{
+    font-size: 1rem;
+}
+
+.bottom-group{
+    padding-top: 3rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+.input-group{
+    margin: 0;
+    padding-top: 8px;
+    max-width: 50%;
+}
+input[type="text"] {
+    border: none;
+    background-color: transparent;
+    padding: 0; 
+    margin: 0; 
+}
+
+input[type="text"] {
+    text-align: center;
+}
+
+.btnbuy{
+    font-size: 1rem;
+    font-weight: 700;
+    color: white;
+    padding: 10px;
+}
