@@ -33,20 +33,13 @@
     ```
 
 ## Run Development
-    Buka terminal
-1. Compile frontend assets:
-
-    ```bash
-    npm run dev
-    ``` 
-    Buka terminal baru
-2. Start the Laravel development server:
+1. Start the Laravel development server:
 
     ```bash
     php artisan serve
     ```
 
-3. Visit http://127.0.0.1:8000/ in your browser and generate the application key.
+2. Visit http://127.0.0.1:8000/ in your browser and generate the application key.
 
 ## Account Information
 
