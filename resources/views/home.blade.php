@@ -11,58 +11,33 @@
         <div class="overlay">
             <div class="centered-text">
                 {{-- <h1>Muyyayan Ghatong!</h1> --}}
-                <h1>Selamat Datang!</h1>
+                <h1>WELCOME TO MUSEUM PURBAKALA BANTEN!</h1>
             </div>
         </div>
     </div>
 
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-md-8">
-                <div class="card">
-                    <div class="row">
-                        <div class="col-md-12 text-center">
-                            <h2>
-                                {{ \Carbon\Carbon::now('Asia/Jakarta')->format('l, d F Y') }}
-                            </h2>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="card">
-                    <div class="row">
-                        <div class="col-md-12 text-center">
-                            <h2 id="realtime-clock"></h2>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <svg id="about" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#e1ad01" fill-opacity="1" d="M0,256L60,234.7C120,213,240,171,360,160C480,149,600,171,720,202.7C840,235,960,277,1080,277.3C1200,277,1320,235,1380,213.3L1440,192L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path></svg>
-    <div class="about-content" style="background-color: #e1ad01">
+    <svg id="about" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#DFD0B8" fill-opacity="1" d="M0,256L60,234.7C120,213,240,171,360,160C480,149,600,171,720,202.7C840,235,960,277,1080,277.3C1200,277,1320,235,1380,213.3L1440,192L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path></svg>
+    <div class="about-content" style="background-color: #DFD0B8">
         <div class="Info" data-aos="fade-right" data-aos-delay="300" data-aos-duration="2000">
             <h2>ABOUT</h2>
             <div class="styled-list" data-aos="fade-right" data-aos-delay="300" data-aos-duration="2000">
                 <b>
-                    Selamat datang di Museum Lampung, tempat yang menyimpan dan memamerkan kekayaan budaya dari wilayah Lampung dengan bangga.
+                    Selamat datang di Museum Purbakala Banten, tempat yang menyimpan dan memamerkan kekayaan budaya dari wilayah Banten dengan bangga.
                 </b>
                 <br>
                 <br>
 
-                Terletak di pusat Lampung, museum kami adalah pusat sejarah, seni, dan eksplorasi budaya yang hidup. Dibangun dengan misi untuk merayakan dan mempromosikan tradisi dan kisah-kisah beragam dari Lampung, kami mengundang Anda untuk memulai perjalanan yang menarik melalui waktu dan warisan.
+                Terletak di Banten Lama, museum kami adalah pusat sejarah, seni, dan eksplorasi budaya yang hidup. Dibangun dengan misi untuk merayakan dan mempromosikan tradisi dan kisah-kisah beragam dari Banten, kami mengundang Anda untuk memulai perjalanan yang menarik melalui waktu dan warisan.
                 <br><br>
-                <b>Hal Menarik dari Museum Lampung:</b>
-    
+                <b>Hal Menarik dari Museum Banten:</b>
+                <br>
                 <ol>
                     <li>Koleksi Artefak yang Indah: Jelajahi berbagai macam artefak, mulai dari benda purba hingga karya seni kontemporer, masing-masing menceritakan kisah unik evolusi budaya Lampung.</li>
                     <li>Pameran Budaya: Nikmati pameran dinamis yang memamerkan tradisi, ritual, dan cerita rakyat yang memberi identitas pada Lampung.</li>
                     <li>Pembelajaran Interaktif: Terlibat dalam tayangan interaktif dan program pendidikan yang dirancang untuk memberikan pemahaman langsung tentang warisan budaya Lampung.</li>
                     <li>Keterlibatan Masyarakat: Bergabunglah dengan kami untuk memupuk rasa komunitas dengan berpartisipasi dalam acara budaya, lokakarya, dan proyek kolaboratif.</li>        
                 </ol>
-                Di Museum Lampung, kami percaya pada kekuatan pelestarian dan pendidikan budaya. Mari temukan kekayaan warisan Lampung bersama kami, dan biarkan masa lalu menyinari masa kini.    
+                Di Museum Purbakala Banten, kami percaya pada kekuatan pelestarian dan pendidikan budaya. Mari temukan kekayaan warisan Lampung bersama kami, dan biarkan masa lalu menyinari masa kini.    
             </div>
         </div>
 
@@ -70,10 +45,10 @@
             <img src="{{ asset('/assets/images/depan.png') }}" alt="">
         </div>
     </div>
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#e1ad01" fill-opacity="1" d="M0,224L48,234.7C96,245,192,267,288,240C384,213,480,139,576,144C672,149,768,235,864,234.7C960,235,1056,149,1152,101.3C1248,53,1344,43,1392,37.3L1440,32L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#DFD0B8" fill-opacity="1" d="M0,224L48,234.7C96,245,192,267,288,240C384,213,480,139,576,144C672,149,768,235,864,234.7C960,235,1056,149,1152,101.3C1248,53,1344,43,1392,37.3L1440,32L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path></svg>
     
     <section class="section">
-        <h1>Museum Lampung Gallery</h1>
+        <h1 class="fw-bold">Gallery Museum Purbakala Banten</h1>
         <div class="grid">
             <div class="item" >
               <div class="item__details">
@@ -143,8 +118,66 @@
           </div>
     </section>
 
+    <svg id="about" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#DFD0B8" fill-opacity="1" d="M0,256L60,234.7C120,213,240,171,360,160C480,149,600,171,720,202.7C840,235,960,277,1080,277.3C1200,277,1320,235,1380,213.3L1440,192L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path></svg>
+    <section class="section" id="event" style="background-color: #DFD0B8">
+        <h1 class="fw-bold">Event</h1>
+        <div class="d-flex flex-wrap justify-content-center" style="gap: 50px">
+            <!-- Kartu 1 -->
+            <div class="card w-25 bg-base-100 shadow-xl" data-aos="fade-up" data-aos-delay="100">
+                <figure class="w-100 h-56 ">
+                <img src="https://i1.wp.com/risetcdn.jatimtimes.com/images/2023/06/23/Gambar-hewan-kucing.-Foto-Halodoc-P37c107f34e701779.jpg?quality=50" alt="kucing" class="object-cover h-56 w-100" /></figure>
+                <div class="card-body"> 
+                    <h2 class="fs-4 ">
+                        Funny Cat!!
+                        <div class="badge badge-secondary">UPDATE</div>
+                    </h2>
+                    <p>Seekor kucing yang imut dan lucu</p>
+                    <div class="card-actions justify-end">
+                        <div class="badge badge-outline">Animals</div> 
+                        <div class="badge badge-outline">News</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Kartu 2 -->
+            <div class="card w-25 bg-base-100 shadow-xl" data-aos="fade-up" data-aos-delay="200">
+               <figure class="w-100 h-56 ">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQy6QRzztYBJiaAU06y_av3PAhh_HEwqfDY9g&s" alt="kucing" class="object-cover h-56 w-100" /></figure>
+                <div class="card-body">
+                    <h2 class="fs-4 ">
+                        Bencana Alam
+                        <div class="badge badge-secondary">UPDATE</div>
+                    </h2>
+                    <p>Telah terjadi banjir bandang di daerah DKI Jakarta</p>
+                    <div class="card-actions justify-end">
+                        <div class="badge badge-outline">Bencana</div> 
+                        <div class="badge badge-outline">News</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Kartu 3 -->
+            <div class="card w-25 bg-base-100 shadow-xl" data-aos="fade-up" data-aos-delay="300">
+                <figure class="w-100 h-56 ">
+                <img src="https://d1bpj0tv6vfxyp.cloudfront.net/articles/253564_20-5-2021_13-2-0.webp" alt="kucing" class="object-cover h-56 w-100" /></figure>
+                <div class="card-body">
+                    <h2 class="fs-4 ">
+                        KDRT
+                        <div class="badge badge-secondary">UPDATE</div>
+                    </h2>
+                    <p>Lesti Kejora mendapatkan kekerasan rumah tangga oleh Rizky Billar</p>
+                    <div class="card-actions justify-end">
+                        <div class="badge badge-outline">Kekerasan</div> 
+                        <div class="badge badge-outline">News</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
     <div id="footer" class="footer">
-        <div class="row footer-section">
+        <div class="row footer">
             <!-- Informasi Kontak -->
             <div class="col-md-4">
                 <div class="footer-section">
@@ -208,7 +241,7 @@
             </div>
         </div>
 
-        <p class=" text-center">&copy; 2024 Your Website Name. All rights reserved.</p>
+        <p class=" text-center">&copy; 2025 dins. All rights reserved.</p>
     </div>
 
     <script>

@@ -30,7 +30,7 @@
                 </div>
 
                 <p class="card-text">
-                    Museum Lampung Ticket
+                    Buy Tiket
                     <br>
                     Remaining Quota <b>{{ $ticket->remaining_quota }}</b>
                 </p>

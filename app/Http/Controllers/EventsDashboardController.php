@@ -2,68 +2,31 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Ticket;
-use App\Models\Transaction;
+use App\Models\Event;
+use App\Models\Upload;
 use App\Models\User;
 use Illuminate\Http\Request;
 
-class AdminDashboardController extends Controller
+class EventsDashboardController extends Controller
 {
     public function index()
     {
-        $homeData = $this->home();
-        $tickets = Ticket::all(); 
-        $tickets = $tickets->map(function ($ticket) {
-            $ticket->totalSold = $ticket->total_quota - $ticket->remaining_quota;
-            return $ticket;
+        $events = Event::all(); 
+        $event = $events->map(function ($events) {
+            $events->totalSold = $events->total_quota - $events->remaining_quota;
+            return $events;
         });
     
-        $tickets = $tickets->sortByDesc('totalSold');    
-
-        if (is_array($homeData)) {
-            return view('admin.dashboard', compact('homeData','tickets'));
-        } else {
-            return view('admin.dashboard', [
-                'totalTickets' => 0,
-                'totalUsers' => 0,
-                'totalAdmins' => 0,
-                'totalTransactions' => 0,
-                'users' => $homeData['users'],
-            ], compact('homeData'));
-        }
-    }
-
-    public function home()
-    {
-        $totalTickets = Ticket::count();
-        $totalUsers = User::where('role', 'user')->count();
-        $totalAdmins = User::where('role', 'admin')->count();
-        $totalTransactions = Transaction::count();
-        $users = User::withCount('transactions')->get();
-
-        return [
-            'totalTickets' => $totalTickets,
-            'totalUsers' => $totalUsers,
-            'totalAdmins' => $totalAdmins,
-            'totalTransactions' => $totalTransactions,
-            'users' => $users,
-        ];
-    }
-
-    public function ticketboard()
-    {
-        $homeData = $this->home(); 
-        $tickets = Ticket::all();
-
-        return view('admin.dashitems.ticketboard', compact('tickets', 'homeData'));
+        $event = $events->sortByDesc('totalSold');   
+        
+        return view('admin.dashitems.events', compact('event'));
     }
 
     public function events()
     {
-        $homeData = $this->home(); 
         $tickets = Ticket::all();
 
-        return view('admin.dashitems.events', compact('tickets', 'homeData'));
+        return view('admin.dashitems.events', compact('tickets'));
     }
 
     public function store(Request $request)

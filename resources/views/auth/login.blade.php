@@ -6,7 +6,7 @@
 <div class="Abody">
     <div class="Acontainer">
         <div class="brand-logo"> <img src="{{ asset('/assets/images/siger.png') }}" alt=""></div>
-        <a class="navbar-brand" href="{{ url('/') }}"><div class="brand-title">Museum Lampung</div></a>
+        <a class="navbar-brand" href="{{ url('/') }}"><div class="brand-title">MUPURBA</div></a>
         <form class="inputs" method="POST" action="{{ route('login') }}">
             @csrf
             <label for="email">{{ __('Email') }}</label>

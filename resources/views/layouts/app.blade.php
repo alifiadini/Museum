@@ -8,7 +8,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <link rel="icon" href="{{ asset('/assets/images/siger.png') }}" type="image/x-icon" />
     {{-- <title>{{ config('app.name', 'Museum') }}</title> --}}
-    <title>Museum Lampung</title>
+    <title>Museum Purbakala Banten</title>
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.bunny.net">
     <link rel="preconnect" href="https://fonts.googleapis.com">

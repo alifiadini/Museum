@@ -13,6 +13,7 @@ use App\Http\Controllers\TicketController;
 use App\Http\Controllers\TiketController;
 use App\Http\Controllers\TransactionController;
 use Illuminate\Support\Facades\Auth;
+use App\Http\Controllers\EventsDashboardController;
 
 /*
 |--------------------------------------------------------------------------
@@ -57,6 +58,7 @@ Route::middleware(['auth'])->group(function () {
 
 Route::prefix('admin')->middleware(['auth', 'admin'])->group(function () {
     Route::get('/dashboard', [AdminDashboardController::class, 'index'])->name('admin.dashboard');
+    Route::get('/events', [EventsDashboardController::class, 'index'])->name('admin.events');
     Route::get('/ticketboard', [AdminDashboardController::class, 'ticketboard'])->name('admin.ticketboard');
     Route::post('/ticketboard', [AdminDashboardController::class, 'store'])->name('admin.ticketboard.store');
     Route::get('/ticketboard/edit/{id}', [AdminDashboardController::class, 'edit'])->name('admin.ticketboard.edit');
@@ -77,3 +79,5 @@ Route::get('/download-pdf/{id}', [TransactionController::class, 'downloadPDF'])-
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::resource('event', EventController::class);

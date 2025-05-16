@@ -40,7 +40,7 @@
                                     </linearGradient>
                                 </defs>
                             </svg>
-                            <p class="fs-4 fw-bold ms-2 mb-0" id="siteName">Museum Lampung</p>
+                            <p class="fs-4 fw-bold ms-2 mb-0" id="siteName">Museum Purbakala Banten</p>
                         </div>
                         <button class="navbar-toggler d-lg-none p-4" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">
                             {{-- <span class="navbar-toggler-icon">yyyy</span> --}}
@@ -64,6 +64,13 @@
                             <a href="{{ route('admin.ticketboard') }}" class="nav-link px-4 py-3 {{ request()->is('admin/ticketboard*') ? 'active' : '' }}">
                                 <i class="fa-solid fa-ticket"></i>
                                 Ticketboard
+                            </a>
+                        </li>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{ route('admin.events') }}" class="nav-link px-4 py-3 {{ request()->is('admin/events*') ? 'active' : '' }}">
+                                <i class="fa-solid fa-ticket"></i>
+                                Events
                             </a>
                         </li>
                     </ul>
@@ -107,7 +114,7 @@
                         <h1 class="fs-4 fw-bold">Dahsboard Overview</h1>
                         <ul class="d-flex align-items-center">
                             <li class="d-flex align-items-center">
-                                <p class="d-none d-md-inline-block mb-0 ms-4 me-3">Museum Lampung</p>
+                                <p class="d-none d-md-inline-block mb-0 ms-4 me-3">Museum Purbakala Banten</p>
                                 <img src="https://placedog.net/300" class="rounded-circle avatar-img" alt="avatar">
                             </li>
                         </ul>
