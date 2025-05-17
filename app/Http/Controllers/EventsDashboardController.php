@@ -19,14 +19,14 @@ class EventsDashboardController extends Controller
     
         $event = $events->sortByDesc('totalSold');   
         
-        return view('admin.dashitems.events', compact('event'));
+        return view('admin.events', compact('event'));
     }
 
     public function events()
     {
         $tickets = Ticket::all();
 
-        return view('admin.dashitems.events', compact('tickets'));
+        return view('admin.events', compact('tickets'));
     }
 
     public function store(Request $request)
@@ -59,7 +59,7 @@ class EventsDashboardController extends Controller
             abort(404);
         }
     
-        return view('admin.dashitems.edit_ticket', compact('ticket','homeData','tickets'));
+        return view('admin.edit_ticket', compact('ticket','homeData','tickets'));
     }
     
     public function update(Request $request, Ticket $ticket)

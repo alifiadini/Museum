@@ -55,7 +55,7 @@ class AdminDashboardController extends Controller
         $homeData = $this->home(); 
         $tickets = Ticket::all();
 
-        return view('admin.dashitems.ticketboard', compact('tickets', 'homeData'));
+        return view('admin.ticketboard', compact('tickets', 'homeData'));
     }
 
     public function events()
@@ -63,7 +63,7 @@ class AdminDashboardController extends Controller
         $homeData = $this->home(); 
         $tickets = Ticket::all();
 
-        return view('admin.dashitems.events', compact('tickets', 'homeData'));
+        return view('admin.events', compact('tickets', 'homeData'));
     }
 
     public function store(Request $request)
@@ -96,7 +96,7 @@ class AdminDashboardController extends Controller
             abort(404);
         }
     
-        return view('admin.dashitems.edit_ticket', compact('ticket','homeData','tickets'));
+        return view('admin.edit_ticket', compact('ticket','homeData','tickets'));
     }
     
     public function update(Request $request, Ticket $ticket)

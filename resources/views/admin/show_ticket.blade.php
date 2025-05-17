@@ -1,6 +1,4 @@
-<!-- resources/views/admin/dashitems/show_ticket.blade.php -->
-
-@extends('admin.dashboard')
+@extends('layouts.admin_app')
 
 @section('content')
     <div class="container-fluid">
