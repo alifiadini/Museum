@@ -6,7 +6,7 @@
 
     <div class="video-container">
         <video loop muted autoplay>
-            <source src="{{ asset('/assets/images/FInal-Vid.mov') }}" type="video/mp4">
+            <source src="{{ asset('/assets/images/video.mp4') }}" type="video/mp4">
         </video>
         <div class="overlay">
             <div class="centered-text">
@@ -42,7 +42,7 @@
         </div>
 
         <div class="image-container">
-            <img src="{{ asset('/assets/images/depan.png') }}" alt="">
+            <img src="{{ asset('/assets/images/museum.jpg') }}" alt="">
         </div>
     </div>
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#DFD0B8" fill-opacity="1" d="M0,224L48,234.7C96,245,192,267,288,240C384,213,480,139,576,144C672,149,768,235,864,234.7C960,235,1056,149,1152,101.3C1248,53,1344,43,1392,37.3L1440,32L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path></svg>
@@ -52,52 +52,52 @@
         <div class="grid">
             <div class="item" >
               <div class="item__details">
-                Meriam
+                Gentong Barrel
               </div>
             </div>
             <div class="item item--large">
               <div class="item__details">
-                Bola besi 
+                Kerpus 
               </div>
             </div>
             <div class="item item--medium">
               <div class="item__details">
-                Batu
+                Patung Pande Emas
               </div>
             </div>
             <div class="item item--large">
               <div class="item__details">
-                Lumbung padi
+                Meriam Voc
               </div>
             </div>
             <div class="item item--full">
               <div class="item__details">
-                 Museum Lampung
+                 Celengan
               </div>
             </div>
             <div class="item item--medium">
               <div class="item__details">
-                AlQuran tulis tangan
+                Cermin
               </div>
             </div>
             <div class="item item--large">
               <div class="item__details">
-                Kain tapis dan Siger
+                Arca Nandi
               </div>
             </div>
             <div class="item">
               <div class="item__details">
-                Alat penyangga pasca sunat
+                Timbangan VOC
               </div>
             </div>
             <div class="item item--medium">
               <div class="item__details">
-                Perahu lesung
+                Hiasan Terokota
               </div>
             </div>
             <div class="item item--large">
               <div class="item__details">
-                Lorong lantai satu
+                Kendi Arca
               </div>
             </div>
             <div class="item">
@@ -107,12 +107,17 @@
             </div>
             <div class="item item--medium">
               <div class="item__details">
-                Pernak-pernik ritual pemakaman
+                Kendi Susu
               </div>
             </div>
+            <div class="item--large">
+              <div class="item__details">
+                Patung Lembu
+              </div>
+              </div>
             <div class="item">
               <div class="item__details">
-                Pernak pernik ritual pernikanan Saibatin
+                Tombak
               </div>
             </div>
           </div>
@@ -236,7 +241,7 @@
                     allowfullscreen=""
                     aria-hidden="false"
                     tabindex="0"
-                    src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCaD1rEk3GVTiSa21Mpz8znAJSJB6qRBGk&q=-5.3722294,105.2409178">
+                    src="https://www.google.com/maps/place/Museum+Situs+Kepurbakalaan+Banten+Lama/@-6.036206,106.1532561,17z/data=!3m1!4b1!4m6!3m5!1s0x2e418cd503245f25:0x32ba6d5b3f4ae62c!8m2!3d-6.0362113!4d106.155831!16s%2Fg%2F11b7k0bfdx?entry=ttu&g_ep=EgoyMDI1MDUxMy4xIKXMDSoASAFQAw%3D%3D">
                 </iframe>
             </div>
         </div>

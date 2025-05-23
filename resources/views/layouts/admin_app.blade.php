@@ -71,7 +71,7 @@
                         </li>
                         <li class="nav-item">
                             <a href="{{ route('admin.events') }}" class="nav-link px-4 py-3 {{ request()->is('admin/events*') ? 'active' : '' }}">
-                                <i class="fa-solid fa-ticket"></i>
+                                <i class="fa-solid fa-calendar-days"></i>
                                 Events
                             </a>
                         </li>

@@ -16,44 +16,62 @@
             </div>
             
             <div class="card-body">
-                <div class="table-responsive">
+
+                @if ($errors->any())
+            <div class="alert alert-danger">
+            <strong>Terjadi kesalahan!</strong>
+            <ul>
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li> {{-- Menampilkan setiap error --}}
+                @endforeach
+            </ul>
+            </div>
+             @endif
+                <div class="table-responsive text-center">
                     <table class="table" id="dataTable" width="100%" cellspacing="0">
                         <thead>
                             <tr>
-                                <th>Tittle</th>
-                                <th>Descripsion</th>
-                                <th>Location</th>
-                                <th>Start Date</th>
-                                <th>End Date</th>
-                                <th>Start Time</th>
-                                <th>End Time</th>
-                                <th>Quota</th>
+                                <th>Judul</th>
+                                <th>Gambar</th>
+                                <th>Deskripsi</th>
+                                <th>Lokasi</th>
+                                <th>Mulai Event</th>
+                                <th>Akhir Event</th>
+                                <th>Mulai Jam</th>
+                                <th>Akhir Jam</th>
+                            </tr>
                         </thead>
                         <tbody>
-                            @foreach ($event as $events)
+                            @foreach ($events as $event)
                                 <tr>
-                                    <td>{{ $events->tittle }}</td>
-                                    <td>{{ $events->Descripsion }}</td>
-                                    <td>{{ $events->location }}</td>
-                                    <td>{{ \Carbon\Carbon::parse($events->start_date)->format('l, d F Y') }}</td>
-                                    <td>{{ \Carbon\Carbon::parse($events->end_date)->format('l, d F Y') }}</td>
-                                    <td>{{ \Carbon\Carbon::parse($events->start_time)->format('H,:i:s') }}</td>
-                                    <td>{{ \Carbon\Carbon::parse($events->end_time)->format('H,:i:s') }}</td>
-                                     <td>{{ $events->remaining_quota }}</td>                        
-                                        <div class="d-flex align-items-center">
-                                            <a href="{{ route('events.dashboard.edit', $events->id) }}" class="btn btn-warning me-2">
+                                    <td>{{ $event->title }}</td>
+                                    <td>
+                                    @if ($event->image)
+                                    <img src="{{ asset('images/events/'. $event->image) }}" width="100" alt="Gambar Event">
+                                    @else
+                                        <p>Tidak ada gambar</p>
+                                    @endif
+                                    </td>
+                                    <td>{{ $event->Descripsion }}</td>
+                                    <td>{{ $event->location }}</td>
+                                    <td>{{ \Carbon\Carbon::parse($event->event_date)->translatedFormat('l, d F Y') }}</td>
+                                    <td>{{ \Carbon\Carbon::parse($event->expired_date)->translatedFormat('l, d F Y') }}</td>
+                                    <td>{{ \Carbon\Carbon::parse($event->start_time)->format('H,:i:s') }}</td>
+                                    <td>{{ \Carbon\Carbon::parse($event->end_time)->format('H,:i:s') }}</td>
+                                    <td>{{ $event->remaining_quota }}</td>                        
+                                        {{-- <div class="d-flex align-items-center">
+                                            <a href="{{ route('events.dashboard.edit', $event->id) }}" class="btn btn-warning me-2">
                                                 <i class="fa-solid fa-pen"></i>
                                             </a>
-                                            <form action="{{ route('events.dashboard.destroy', $events->id) }}" method="POST" onsubmit="return confirm('Are you sure you want to delete the {{ $events->tittle }} event?')" style="margin-bottom: 0;">
+                                            <form action="{{ route('events.dashboard.destroy', $event->id) }}" method="POST" onsubmit="return confirm('Are you sure you want to delete the {{ $event->title }} event?')" style="margin-bottom: 0;">
                                                 @csrf
                                                 @method('DELETE')
                                                 <button type="submit" class="btn btn-danger">
                                                     <i class="fa-solid fa-trash"></i>
                                                 </button>
                                             </form>
-                                        </div>
-                                    </td>
-                                    
+                                        </div> --}}
+                                    </td>                                   
                                 </tr>
                             @endforeach
                         </tbody>
@@ -69,45 +87,44 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-body">
-                    <h5 class="modal-title" id="addTicketModalLabel">Add Ticket</h5>
-                    <form class="row g-1 card-body p-3 pt-1"action="{{ route('admin.ticketboard.store') }}" method="POST">
+                    <h5 class="modal-title" id="addTicketModalLabel">Upload Event</h5>
+                    <form class="row g-1 card-body p-3 pt-1"action="{{ route('admin.events.store') }}" method="POST" enctype="multipart/form-data">
                         @csrf
                         <div class="mb-3">
-                            <label for="name" class="form-label">Name</label>
-                            <input type="text" class="form-control" id="name" name="name" required>
-                        </div>
-                        <div class="col-md-6">
-                            <label for="price_anak_anak" class="form-label">Price (Anak-Anak)</label>
-                            <input type="number" class="form-control" id="price_anak_anak" name="price_anak_anak" required>
-                        </div>
-                        <div class=" col-md-6">
-                            <label for="price_mahasiswa" class="form-label">Price (Mahasiswa)</label>
-                            <input type="number" class="form-control" id="price_mahasiswa" name="price_mahasiswa" required>
+                            <label for="name" class="form-label">Judul</label>
+                            <input type="text" class="form-control" id="name" name="title" required>
                         </div>
                         <div class="mb-3">
-                            <label for="price_dewasa" class="form-label">Price (Dewasa)</label>
-                            <input type="number" class="form-control" id="price_dewasa" name="price_dewasa" required>
+                             <label for="image" class="form-label">Gambar</label>
+                             <input type="file" class="form-control" id="image" name="image" accept="image/*" required>
                         </div>
-                        <div class="col-md-6  mb-3">
-                            <label for="total_quota" class="form-label">Total Quota</label>
-                            <input type="number" class="form-control" id="total_quota" name="total_quota" required>
-                        </div>
-                        <div class="col-md-6 mb-3">
-                            <label for="remaining_quota" class="form-label">Remaining Quota</label>
-                            <input type="number" class="form-control" id="remaining_quota" name="remaining_quota" required>
-                        </div>
-                        <div class="col-md-6 mb-3">
-                            <label for="event_date" class="form-label">Event Date</label>
+                       <div class="mb-3">
+                            <label for="name" class="form-label">Desripsi</label>
+                            <input type="text" class="form-control" id="name" name="description" required>
+                       </div> 
+                       <div class="mb-3">
+                            <label for="name" class="form-label">Lokasi</label>
+                            <input type="text" class="form-control" id="name" name="location" required>
+                       </div> 
+                       <div class="mb-3">
+                            <label for="event_date" class="form-label">Mulai Event</label>
                             <input type="date" class="form-control" id="event_date" name="event_date" required>
                         </div>
-                        <div class="col-md-6 mb-3">
-                            <label for="expiry_date" class="form-label">Expiry Date</label>
-                            <input type="date" class="form-control" id="expiry_date" name="expiry_date" required>
+                        <div class="mb-3">
+                            <label for="event_date" class="form-label">Akhir Date</label>
+                            <input type="date" class="form-control" id="expired_date" name="expired_date" required>
                         </div>
-                        <button type="submit" class="btn btn-primary">Add Ticket</button>
+                        <div class="mb-3">
+                            <label for="start_time" class="form-label">Mulai Jam</label>
+                            <input type="time" class="form-control" id="start_time" name="start_time" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="end_time" class="form-label">Akhir Jam</label>
+                            <input type="time" class="form-control" id="end_time" name="end_time" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Posting</button>
                     </form>
                 </div>
-
             </div>
         </div>
     </div>
