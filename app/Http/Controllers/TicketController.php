@@ -12,15 +12,9 @@ class TicketController extends Controller
 {
     public function index()
     {
-        // $tickets = Ticket::where('remaining_quota', '>', 0)->get();
-        $today = Carbon::now();
-
-        // Ambil tiket yang belum habis kuotanya dan belum kadaluwarsa
-        $tickets = Ticket::where('expiry_date', '>', $today)
-            ->where('remaining_quota', '>', 0)
+        $tickets = Ticket::where('remaining_quota', '>', 0)
             ->orderBy('expiry_date')
             ->get();
-
 
         return view('ticket', compact('tickets'));
     }

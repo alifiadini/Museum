@@ -1,18 +1,19 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
 
+use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\AdminController;
-use App\Http\Controllers\AdminDashboardController;
-use App\Http\Controllers\Auth\LoginController;
-use App\Http\Controllers\CategoryController;
-use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\TiketController;
 use App\Http\Controllers\QrCodeController;
 use App\Http\Controllers\TicketController;
-use App\Http\Controllers\TiketController;
+use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\TransactionController;
-use Illuminate\Support\Facades\Auth;
+use App\Http\Controllers\AdminDashboardController;
 use App\Http\Controllers\EventsDashboardController;
 
 /*
@@ -28,9 +29,7 @@ use App\Http\Controllers\EventsDashboardController;
 
 // routes/web.php
 
-Route::get('/', function () {
-    return view('home');
-})->name('home');
+Route::get('/', [HomeController::class, 'index'])->name('home');
 
 // routes/web.php
 

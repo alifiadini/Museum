@@ -22,9 +22,8 @@
                             <tr>
                                 <th>ID</th>
                                 <th>Name</th>
-                                <th>Price (Anak-Anak)</th>
-                                <th>Price (Mahasiswa)</th>
-                                <th>Price (Dewasa)</th>
+                                <th>Price (Pelajar)</th>
+                                <th>Price (Umum)</th>
                                 <th>Total Quota</th>
                                 <th>Remaining Quota</th>
                                 <th>Event Date</th>
@@ -37,9 +36,8 @@
                                 <tr>
                                     <td>{{ $ticket->id }}</td>
                                     <td>{{ $ticket->name }}</td>
-                                    <td>Rp.{{ $ticket->price_anak_anak }}</td>
-                                    <td>Rp.{{ $ticket->price_mahasiswa }}</td>
-                                    <td>Rp.{{ $ticket->price_dewasa }}</td>
+                                    <td>Rp.{{ $ticket->price_pelajar }}</td>
+                                    <td>Rp.{{ $ticket->price_umum }}</td>
                                     <td>{{ $ticket->total_quota }}</td>
                                     <td>{{ $ticket->remaining_quota }}</td>
                                     <td>{{ \Carbon\Carbon::parse($ticket->event_date)->format('l, d F Y') }}</td>
@@ -82,16 +80,12 @@
                             <label for="name" class="form-label">Name</label>
                             <input type="text" class="form-control" id="name" name="name" required>
                         </div>
-                        <div class="col-md-6">
-                            <label for="price_anak_anak" class="form-label">Price (Anak-Anak)</label>
-                            <input type="number" class="form-control" id="price_anak_anak" name="price_anak_anak" required>
-                        </div>
                         <div class=" col-md-6">
-                            <label for="price_mahasiswa" class="form-label">Price (Mahasiswa)</label>
+                            <label for="price_pelajar" class="form-label">Price (Pelajar)</label>
                             <input type="number" class="form-control" id="price_mahasiswa" name="price_mahasiswa" required>
                         </div>
                         <div class="mb-3">
-                            <label for="price_dewasa" class="form-label">Price (Dewasa)</label>
+                            <label for="price_umum" class="form-label">Price (Umum)</label>
                             <input type="number" class="form-control" id="price_dewasa" name="price_dewasa" required>
                         </div>
                         <div class="col-md-6  mb-3">

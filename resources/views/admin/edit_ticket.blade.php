@@ -2,7 +2,7 @@
 
 @section('content')
 
-{{-- <section class="container-fluid px-4 py-4">
+<section class="container-fluid px-4 py-4">
     <div class="card">
         <div class="p-5 pb-1">
             <div>
@@ -17,19 +17,13 @@
                 <label for="name" class="form-label">Name</label>
                 <input type="text" class="form-control" id="name" name="name" value="{{ $ticket->name }}" required>
             </div>
-            <div class="col-md-6">
                 <div class="mb-3">
-                    <label for="price_anak_anak" class="form-label">Price (Anak-Anak)</label>
-                    <input type="text" class="form-control" id="price_anak_anak" name="price_anak_anak" value="{{ $ticket->price_anak_anak }}" required>
-                </div>
-
-                <div class="mb-3">
-                    <label for="price_mahasiswa" class="form-label">Price (Mahasiswa)</label>
+                    <label for="price_mahasiswa" class="form-label">Price (Pelajar)</label>
                     <input type="text" class="form-control" id="price_mahasiswa" name="price_mahasiswa" value="{{ $ticket->price_mahasiswa }}" required>
                 </div>
 
                 <div class="mb-3">
-                    <label for="price_dewasa" class="form-label">Price (Dewasa)</label>
+                    <label for="price_dewasa" class="form-label">Price (Umum)</label>
                     <input type="text" class="form-control" id="price_dewasa" name="price_dewasa" value="{{ $ticket->price_dewasa }}" required>
                 </div>
             </div>
@@ -60,7 +54,7 @@
             </div>
         </form>
     </div>
-</section> --}}
+</section>
 
     <div class="container-fluid">
         <h1 class="mt-4">Edit Ticket</h1>
@@ -78,19 +72,14 @@
                         <label for="name" class="form-label">Name</label>
                         <input type="text" class="form-control" id="name" name="name" value="{{ $ticket->name }}" required>
                     </div>
-                    <div class="col-md-6">
+    
                         <div class="mb-3">
-                            <label for="price_anak_anak" class="form-label">Price (Anak-Anak)</label>
-                            <input type="text" class="form-control" id="price_anak_anak" name="price_anak_anak" value="{{ $ticket->price_anak_anak }}" required>
-                        </div>
-        
-                        <div class="mb-3">
-                            <label for="price_mahasiswa" class="form-label">Price (Mahasiswa)</label>
+                            <label for="price_mahasiswa" class="form-label">Price (Pelajar)</label>
                             <input type="text" class="form-control" id="price_mahasiswa" name="price_mahasiswa" value="{{ $ticket->price_mahasiswa }}" required>
                         </div>
         
                         <div class="mb-3">
-                            <label for="price_dewasa" class="form-label">Price (Dewasa)</label>
+                            <label for="price_dewasa" class="form-label">Price (Umum)</label>
                             <input type="text" class="form-control" id="price_dewasa" name="price_dewasa" value="{{ $ticket->price_dewasa }}" required>
                         </div>
                     </div>

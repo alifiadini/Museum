@@ -127,56 +127,26 @@
     <section class="section" id="event" style="background-color: #DFD0B8">
         <h1 class="fw-bold">Event</h1>
         <div class="d-flex flex-wrap justify-content-center" style="gap: 50px">
-            <!-- Kartu 1 -->
-            <div class="card w-25 bg-base-100 shadow-xl" data-aos="fade-up" data-aos-delay="100">
-                <figure class="w-100 h-56 ">
-                <img src="https://i1.wp.com/risetcdn.jatimtimes.com/images/2023/06/23/Gambar-hewan-kucing.-Foto-Halodoc-P37c107f34e701779.jpg?quality=50" alt="kucing" class="object-cover h-56 w-100" /></figure>
-                <div class="card-body"> 
-                    <h2 class="fs-4 ">
-                        Funny Cat!!
-                        <div class="badge badge-secondary">UPDATE</div>
-                    </h2>
-                    <p>Seekor kucing yang imut dan lucu</p>
-                    <div class="card-actions justify-end">
-                        <div class="badge badge-outline">Animals</div> 
-                        <div class="badge badge-outline">News</div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Kartu 2 -->
-            <div class="card w-25 bg-base-100 shadow-xl" data-aos="fade-up" data-aos-delay="200">
-               <figure class="w-100 h-56 ">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQy6QRzztYBJiaAU06y_av3PAhh_HEwqfDY9g&s" alt="kucing" class="object-cover h-56 w-100" /></figure>
-                <div class="card-body">
-                    <h2 class="fs-4 ">
-                        Bencana Alam
-                        <div class="badge badge-secondary">UPDATE</div>
-                    </h2>
-                    <p>Telah terjadi banjir bandang di daerah DKI Jakarta</p>
-                    <div class="card-actions justify-end">
-                        <div class="badge badge-outline">Bencana</div> 
-                        <div class="badge badge-outline">News</div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Kartu 3 -->
-            <div class="card w-25 bg-base-100 shadow-xl" data-aos="fade-up" data-aos-delay="300">
-                <figure class="w-100 h-56 ">
-                <img src="https://d1bpj0tv6vfxyp.cloudfront.net/articles/253564_20-5-2021_13-2-0.webp" alt="kucing" class="object-cover h-56 w-100" /></figure>
-                <div class="card-body">
-                    <h2 class="fs-4 ">
-                        KDRT
-                        <div class="badge badge-secondary">UPDATE</div>
-                    </h2>
-                    <p>Lesti Kejora mendapatkan kekerasan rumah tangga oleh Rizky Billar</p>
-                    <div class="card-actions justify-end">
-                        <div class="badge badge-outline">Kekerasan</div> 
-                        <div class="badge badge-outline">News</div>
-                    </div>
-                </div>
-            </div>
+          @foreach ($events as $event)
+              <div class="card w-25 bg-base-100 shadow-xl" data-aos="fade-up" data-aos-delay="100">
+                  <figure class="w-100 h-56 ">
+                  <img src="{{ asset('images/events/' . $event->image) }}" alt="kucing" class="object-cover h-56 w-100" /></figure>
+                  <div class="card-body"> 
+                      <div class="d-flex justify-content-end">
+                          <div class="badge text-bg-secondary" style="font-size: 12px;">{{ $event->location }}</div>
+                      </div>
+                      <h2 class="fs-4">
+                          {{ $event->title }}
+                      </h2>
+                      <p>{{ $event->description }}</p>
+                      <div>
+                        <p class="fw-bold my-0 py-0" style="font-size: 12px;">Start: {{ \Carbon\Carbon::parse($event->start_date)->translatedFormat('d F Y') }} {{ \Carbon\Carbon::parse($event->start_time)->translatedFormat('H:m') }}</p>
+                        <p class="fw-bold my-0 py-0" style="font-size: 12px;">End: {{ \Carbon\Carbon::parse($event->end_date)->translatedFormat('d F Y') }} {{ \Carbon\Carbon::parse($event->end_time)->translatedFormat('H:m') }}</p>
+                      </div>
+                  </div>
+              </div>
+            
+          @endforeach
         </div>
     </section>
     

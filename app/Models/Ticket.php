@@ -11,7 +11,6 @@ class Ticket extends Model
 
     protected $fillable = [
         'name',
-        'price_anak_anak',
         'price_mahasiswa',
         'price_dewasa',
         'total_quota',
