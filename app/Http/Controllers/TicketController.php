@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Ticket;
+use App\Models\TicketVisitor;
 use App\Models\Transaction;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
@@ -71,7 +72,8 @@ class TicketController extends Controller
             abort(404);
         }
 
-        return view('show', compact('ticket'));
+        $ticket_visitors = TicketVisitor::where('id_ticket', $ticket->id)->get();
+        return view('show', compact('ticket', 'ticket_visitors'));
     }
 
     public function calculateTotalAmount(Request $request)
