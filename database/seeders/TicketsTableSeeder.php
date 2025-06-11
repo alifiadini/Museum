@@ -14,7 +14,7 @@ class TicketsTableSeeder extends Seeder
     public function run(): void
     {
         Ticket::create([
-            'name' => 'Paket Wisata',
+            'name' => 'Paket Umum',
             'price_anak_anak' => 3000,
             'price_mahasiswa' => 5000,
             'price_dewasa' => 15000,
@@ -25,7 +25,7 @@ class TicketsTableSeeder extends Seeder
         ]);
 
         Ticket::create([
-            'name' => 'Paket Mahasiswa',
+            'name' => 'Paket Pelajar',
             'price_anak_anak' => 5000,
             'price_mahasiswa' => 3000,
             'price_dewasa' => 20000,
