@@ -13,8 +13,8 @@
             @foreach($tickets as $ticket)
                 <div class="card">
                     <h3 class="card__title">{{ $ticket->name }}</h3>
-                    <p class="card__price">Rp.{{ $ticket->price_mahasiswa }}<span>/Pelajar</span></p>
-                    <p class="card__price">Rp.{{ $ticket->price_dewasa }}<span>/Umum</span></p>
+                    <p class="card__price">Rp.{{ $ticket->price_mahasiswa }}<span>/Anak-anak</span></p>
+                    <p class="card__price">Rp.{{ $ticket->price_dewasa }}<span>/Dewasa</span></p>
                     <div class="card__body">
                         <p><strong>Total Quota </strong>{{ $ticket->total_quota }}</p>
                         <p><strong>Remaining Quota </strong>{{ $ticket->remaining_quota }}</p>

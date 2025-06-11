@@ -82,11 +82,11 @@
                         </div>
                         <div class=" col-md-6">
                             <label for="price_pelajar" class="form-label">Price (Pelajar)</label>
-                            <input type="number" class="form-control" id="price_mahasiswa" name="price_mahasiswa" required>
+                            <input type="number" class="form-control" id="price_pelajar" name="price_pelajar" required>
                         </div>
                         <div class="mb-3">
                             <label for="price_umum" class="form-label">Price (Umum)</label>
-                            <input type="number" class="form-control" id="price_dewasa" name="price_dewasa" required>
+                            <input type="number" class="form-control" id="price_umum" name="price_umum" required>
                         </div>
                         <div class="col-md-6  mb-3">
                             <label for="total_quota" class="form-label">Total Quota</label>

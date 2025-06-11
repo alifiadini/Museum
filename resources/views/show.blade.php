@@ -49,20 +49,6 @@
                             </div>
                         </div>
                     </div>
-    
-                    <div class="cols">
-                        <b>Mahasiswa</b>
-                        <label for="quantity_mahasiswa">Rp.{{ $ticket->price_mahasiswa }}</label>
-                        <div class="input-group">
-                            <div class="input-group-prepend">
-                                <button type="button" class="btn btn-outline-secondary" onclick="decrement('quantity_mahasiswa')"><i class="fa-solid fa-minus"></i></button>
-                            </div>
-                            <input type="text" class="form-control" id="quantity_mahasiswa" name="quantity_mahasiswa" value="0" readonly>
-                            <div class="input-group-append">
-                                <button type="button" class="btn btn-outline-secondary" onclick="increment('quantity_mahasiswa')"><i class="fa-solid fa-plus"></i></button>
-                            </div>
-                        </div>
-                    </div>
                     
                     <div class="cols">
                         <b>Dewasa</b>

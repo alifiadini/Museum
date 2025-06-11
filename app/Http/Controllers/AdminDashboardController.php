@@ -71,9 +71,8 @@ class AdminDashboardController extends Controller
 
         $request->validate([
             'name' => 'required|string',
-            'price_anak_anak' => 'required|numeric',
-            'price_mahasiswa' => 'required|numeric',
-            'price_dewasa' => 'required|numeric',
+            'price_pelajar' => 'required|numeric',
+            'price_umum' => 'required|numeric',
             'total_quota' => 'required|integer',
             'remaining_quota' => 'required|integer',
             'event_date' => 'required|date',
@@ -81,6 +80,7 @@ class AdminDashboardController extends Controller
         ]);
 
         // Simpan tiket ke dalam database
+        $ticket = ['name, '];
         Ticket::create($request->all());
 
         return redirect()->route('admin.ticketboard')->with('success', 'Ticket added successfully.');
@@ -104,9 +104,8 @@ class AdminDashboardController extends Controller
 
         $request->validate([
             'name' => 'required|string',
-            'price_anak_anak' => 'required|numeric',
-            'price_mahasiswa' => 'required|numeric',
-            'price_dewasa' => 'required|numeric',
+            'price_pelajar' => 'required|numeric',
+            'price_umum' => 'required|numeric',
             'total_quota' => 'required|integer',
             'remaining_quota' => 'required|integer',
             'event_date' => 'required|date',
@@ -115,9 +114,8 @@ class AdminDashboardController extends Controller
         
         $ticket->update([
             'name' => $request->name,
-            'price_anak_anak' => $request->price_anak_anak,
-            'price_mahasiswa' => $request->price_mahasiswa,
-            'price_dewasa' => $request->price_dewasa,
+            'price_pelajar' => $request->price_pelajar,
+            'price_umum' => $request->price_umum,
             'total_quota' => $request->total_quota,
             'remaining_quota' => $request->remaining_quota,
             'event_date' => $request->event_date,
