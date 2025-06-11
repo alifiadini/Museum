@@ -49,26 +49,8 @@
                                     <button type="button" class="btn btn-outline-secondary" onclick="increment('quantity_anak_anak')"><i class="fa-solid fa-plus"></i></button>
                                 </div>
                             </div>
-                            <input type="text" class="form-control" id="quantity_anak_anak" name="quantity_anak_anak" value="0" readonly>
-                            <div class="input-group-append">
-                                <button type="button" class="btn btn-outline-secondary" onclick="increment('quantity_anak_anak')"><i class="fa-solid fa-plus"></i></button>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="cols">
-                        <b>Dewasa</b>
-                        <label for="quantity_dewasa">Rp.{{ $ticket->price_dewasa }}</label>
-                        <div class="input-group">
-                            <div class="input-group-prepend">
-                                <button type="button" class="btn btn-outline-secondary" onclick="decrement('quantity_dewasa')"><i class="fa-solid fa-minus"></i></button>
-                            </div>
-                            <input type="text" class="form-control" id="quantity_dewasa" name="quantity_dewasa" value="0" readonly>
-                            <div class="input-group-append">
-                                <button type="button" class="btn btn-outline-secondary" onclick="increment('quantity_dewasa')"><i class="fa-solid fa-plus"></i></button>
-                            </div>
-                        </div>
-                    </div>
+                        </div>                    
+                    @endforeach
                 </div>
                
                 <div class="bottom-group">
